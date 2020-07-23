@@ -1,6 +1,7 @@
 package br.com.toshiakibruno.workshopmongo.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -12,18 +13,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter @Setter
+@Getter
+@Setter
 @Document
-public class User implements Serializable {
+public class Post implements Serializable {
 
-	private static final long serialVersionUID = 1L; 
+	private static final long serialVersionUID = 1L;
 
 	@Id
-	@EqualsAndHashCode.Include @ToString.Exclude private String id;
-	private String name;
-	private String email;
+	private @EqualsAndHashCode.Include @ToString.Exclude String id;
+	private Date date;
+	private String title;
+	private String body;
+	private User author;
+	
 
 }
