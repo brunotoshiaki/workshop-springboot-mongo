@@ -22,7 +22,7 @@ public class SwaggerConfig {
 		return new Docket(DocumentationType.SWAGGER_2).useDefaultResponseMessages(false)
 
 				.select().apis(RequestHandlerSelectors.any())
-				.apis(RequestHandlerSelectors.basePackage("com.nelioalves.cursomc.resources"))
+				.apis(RequestHandlerSelectors.basePackage("br.com.toshiakibruno.workshopmongo.resources"))
 				.paths(PathSelectors.any()).build().	apiInfo(apiInfo());
 	}
 
