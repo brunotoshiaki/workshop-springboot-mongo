@@ -33,7 +33,7 @@ public class PostResource {
 
 		
 
-	@ApiOperation(value = "Retorna o post contendo um pedaço do título")
+	@ApiOperation(value = "Buscar posts contendo um dado string no título")
 	@GetMapping(value = "/titlesearch")
 	public ResponseEntity<List<Post>> findbyTitle(@RequestParam(value = "text", defaultValue = "") String text) {
 		text = URL.decodeParam(text);
